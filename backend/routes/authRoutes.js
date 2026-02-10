@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { body } from 'express-validator'
+import { body } from 'express-validator';
 import {
     register,
     login, 
@@ -16,7 +16,7 @@ const router = express.Router();
 const registerValidation = [
     body('username')
     .trim()
-    .isLength({ min: 3})
+    .isLength({ min: 3}) 
     .withMessage('Username must be atleast 3 characters'),
     body('email')
     .isEmail()
